@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>login form</title>
+  
+</head>
+<style type="text/css">
+  body {
+    background-color: #000080;
+    color:#FFFFFF;  
+    margin-top: 13%;
+  }
+  #password{
+      margin:20px;
+  } 
+ 
+</style>
+<script type="text/javascript">
+  function validateform(){  
+var name=document.getElementById('username').value; 
+var password=document.getElementById('password').value;
+  
+if (name=="developer" && password=="prem")
+{  
+  alert("Welcome");
+  return true;  
+   }
+else {  
+  alert("incorrect attempt");  
+  return false;  
+  }  
+}  
+function box() {
+  document.getElementById('username').value="";
+  document.getElementById('password').value="";
+}
+</script>
+<body align="center">
+<form action="homepage.html" onsubmit=" return validateform()">
+  
+<h2>Login Form</h2>
+
+<table align="center">
+  <tr><td><label>Username</label><td><input type="text" id="username" required></td></td></tr>
+  <tr><td><label>Password</label><td><input type="password" id="password" required></td></td></tr>
+</table>
+<input type="submit" value="submit"> <input type="submit" value="clear" onclick="box()">
+
+</form>
+</body>
+</html>

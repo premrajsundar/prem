@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<style type="text/css">
+	body{
+		color: #ffff;
+		padding-top: 50px;
+		padding-bottom: 50px;
+		padding-left: 50px;
+		padding-right: 50px;
+		align-items:  center;
+	}
+	a{
+		color:#ffff;
+		margin-left: 90%;
+		font-size: 120%;
+	}
+</style>
+<script type="text/javascript">
+	function fn(){
+		var i =document.getElementById('name').value;
+		var j = document.getElementById('ph').value;
+		var k = document.getElementById('city').value;
+		var l = document.getElementById('sub').value;
+		var m = document.getElementById('ct').value;
+		var n = document.getElementById('sc').value;
+
+		
+		if((i != "") && (j != "") && (k != "") && (l != "") && (m != "") && (n!="") ){
+			alert("Data Inserted");
+		document.getElementById('fname').value=document.getElementById('name').value;
+		document.getElementById('fph').value=document.getElementById('ph').value;
+		document.getElementById('fcity').value=document.getElementById('city').value;
+		document.getElementById('fsub').value = document.getElementById('sub').value;
+		document.getElementById('fct').value = document.getElementById('ct').value;
+		document.getElementById('fsc').value = document.getElementById('sc').value;
+
+		}
+		else{
+			alert("please enter the data");
+		}
+		}
+        function clr(){
+			document.getElementById('fname').value=document.getElementById('name').value="";
+		document.getElementById('fph').value=document.getElementById('ph').value="";
+		document.getElementById('fcity').value=document.getElementById('city').value="";
+		document.getElementById('fsub').value = document.getElementById('sub').value="";
+		document.getElementById('fct').value = document.getElementById('ct').value="";
+		document.getElementById('fsc').value = document.getElementById('sc').value="";
+		}
+
+	
+</script>
+<body style="background-color: #000080">
+	<a href="teacherattadance.html">Nextpage</a>
+	<table align="center">
+		<h2 align="center">Teacher Details</h2>
+	<tr><td>NAME</td><td><input type="text" id="name" required=""></td></tr>
+	<tr><td> PHONE</td><td><input type="text" id="ph" required=""></td></tr>
+	<tr><td>ADDRESS</td><td><input type="text" id="city" required=""></td></tr>
+	<tr><td>SUBJECTS</td><td><input type="text" id="sub" required=""></td></tr>
+	<tr><td>CLASS TEACHER</td><td><input type="text" id="ct" required=""></td></tr>
+	<tr><td>SPECIAL SUBJECTS</td><td><input type="text" id="sc" required=""></td></tr>
+   </table>
+	<center><button type="button" onclick="fn()" >click</button></center>
+	
+	<h2 align="center">View Teacher Details</h2>
+	<table align="center">
+	<tr><td>NAME</td><td><input type="text" id="fname"></td></tr>
+	<tr><td>PHONE</td><td><input type="text" id="fph"></td></tr>
+	<tr><td>CITY</td><td><input type="text" id="fcity"></td></tr>
+	<tr><td>SUBJECT</td><td><input type="text" id="fsub"></td></tr>
+	<tr><td>CLASS TEACHER</td><td><input type="text" id="fct"></td></tr>
+	<tr><td>SPECIAL CLASS</td><td><input type="text" id="fsc"></td></tr>
+	</table>
+	<center><button type="button" onclick="clr()" >Clear</button></center>
+</body>
+</html>

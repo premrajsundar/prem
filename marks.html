@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>marks</title>
+</head>
+<style type="text/css">
+	body {
+         color:#FFFFFF;
+		 background-color: #000080;
+		 font-size: 20px;
+         font-family: Times New Roman;
+	}
+	a{
+		
+		 color:#FFFFFF;
+	}
+	#new {
+		margin-left: 70%;
+		font-size: 100%;
+	}
+</style>
+<script type="text/javascript">
+	function mark() {
+    var grade="";
+    var result="";
+    var a=document.getElementById('tamil').value;
+    var b=document.getElementById('english').value;
+    var c=document.getElementById('maths').value;
+    var d=document.getElementById('science').value;
+    var e=document.getElementById('social').value;
+    var total= a - (- b) - (- c ) - ( - d ) - ( - e) ;
+    var average=total/5;
+   
+    switch(
+        (average>60 && average<=100)?1:
+        (average>50 && average<=90)?2:
+        (average>40 && average<=50)?3: 0
+    	)
+	
+	{
+		case 1 :grade = "A"; result="First class"; break;
+		case 2 :grade = "B"; result="Second class"; break;
+		case 3 :grade = "C"; result="Third class"; break;
+		case 4 :grade = "D"; result="Fail"; break;
+ 
+	}
+   if ((a!="") && (b!="") && (c!="") && (d!="") && (e!="") ) 
+   {
+         alert("datas inserted");
+   }
+   else
+   {
+   	    alert("datas not inserted");
+   }
+   document.getElementById('rname').value=document.getElementById('name').value;
+   document.getElementById('rstd').value=document.getElementById('std').value;
+   document.getElementById('txtTotalMark').value=total;
+   document.getElementById('txtAverageMark').value=average;
+   document.getElementById('txtGrade').value=grade;
+   document.getElementById('txtresult').value=result;
+}
+function bill() {
+	 document.getElementById('rname').value=document.getElementById('name').value="";
+   document.getElementById('rstd').value=document.getElementById('std').value="";
+   document.getElementById('txtTotalMark').value="";
+   document.getElementById('txtAverageMark').value="";
+   document.getElementById('txtGrade').value="";
+   document.getElementById('txtresult').value="";
+}
+</script>
+<body align="center">
+<h2>marks</h2>
+<a href="manual.html" id="new">NextPage</a>
+
+	<fieldset>
+		<legend align="center"><b>Student Marks</b></legend>
+ <label>Name:</label>
+ <input type="text" onfocus="this.value=''"id="name" required>
+ <label>Std:</label>
+ <input type="text" onfocus="this.value=''" id="std" required><br/><br/>
+<table align="center" >
+
+	<tr><td><label>Tamil</label><td><input type="text" onfocus="this.value=''" id="tamil"  required></td></td></tr>
+	<tr><td><label>English</label><td><input type="text" onfocus="this.value=''" id="english" required></td></td></tr>
+	<tr><td><label>Maths</label><td><input type="text" onfocus="this.value=''" id="maths" required></td></td></tr>
+	<tr><td><label>Science</label><td><input type="text"onfocus="this.value=''"  id="science" required></td></td></tr>
+	<tr><td><label>Social</label><td><input type="text" onfocus="this.value=''" id="social" required></td></td></tr>
+	</table>
+	<button type="button" onclick="mark()">Total</button>
+</fieldset>
+<h2 align="center">Report Card</h2>
+<table align="center">
+	<tr><td>Name:</td><td><input type="text" onfocus="this.value=''" id="rname"></td></tr>
+	<tr><td>Std:</td><td><input type="text" onfocus="this.value=''" id="rstd"></td></tr>
+	<tr><td>Totalmark</td><td><input type="text" onfocus="this.value=''" id="txtTotalMark"></td></tr>
+	<tr><td>Averagemark</td><td><input type="text" onfocus="this.value=''" id="txtAverageMark"></td></tr>
+	<tr><td>Grade</td><td><input type="text" onfocus="this.value=''" id="txtGrade"></td></tr>
+	<tr><td>report</td><td><input type="text"onfocus="this.value=''" id="txtresult"></td></tr>
+   </table>
+  <button type="button" onclick="bill()">Clear</button>
+
+</body>
+</html>

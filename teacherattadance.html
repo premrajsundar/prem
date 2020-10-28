@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<style type="text/css">
+	body{
+		color: #ffff;
+		margin-top: 50px;
+		padding-top: 30px;
+		padding-bottom: 50px;
+		padding-left: 50px;
+		padding-right: 50px;
+		align-items:  center;
+	}
+	a{
+		color: #ffff;
+		margin-left: 90%;
+		font-size: 120%;
+	}
+</style>
+<script type="text/javascript">
+	function fun() {
+		var i = document.getElementById('name').value;
+		var j = document.getElementById('ct').value;
+		var k = document.getElementById('abc').value;
+		var l = document.getElementById('fa').value;
+		var m = k* l;
+		if(i!="" && j!="" && k!="" && l!=""){
+			alert("inserted Sucess fully");
+		document.getElementById('p1').value=document.getElementById('name').value;
+		document.getElementById('p2').value=document.getElementById('ct').value;
+		document.getElementById('p3').value=document.getElementById('abc').value;
+		document.getElementById('p4').value=document.getElementById('fa').value;
+		document.getElementById('p5').value=m;
+		}
+		else{
+			alert('Enter the data');
+		}
+		
+	}
+	function fremove(){
+		document.getElementById('p1').value=document.getElementById('name').value="";
+		document.getElementById('p2').value=document.getElementById('ct').value="";
+		document.getElementById('p3').value=document.getElementById('abc').value="";
+		document.getElementById('p4').value=document.getElementById('fa').value="";
+		document.getElementById('p5').value=m="";
+		
+	}
+</script>
+<body style="background-color: #000080">
+	<a href="teachersalary.html">NextPage</a>
+	<center>
+		<h2>ATTEDANCE</h2>
+		<table>
+		<tr><td>NAME: </td><td><input type="text" onfocus="this.value=''" id="name"></td></tr>
+		<tr><td>CLASS TEACHER</td><td><input type="text" onfocus="this.value=''" id="ct"></td></tr>
+		<tr><td>ATTEDANCE</td><td>PRESENT<input type="radio" id="r1" name="att" value="PRESENT">ABSENT<input type="radio" id="r2" name="att" value="ABSENT"></td></tr>
+		<tr><td>ABSENT DAYS</td><td><input type="text" onfocus="this.value=''" id="abc"></td></tr>
+		<tr><td>FINE AMOUNT</td><td><input type="text" onfocus="this.value=''" id="fa"></td></tr>
+	</table><br>
+	<button type="button" onclick="fun()">PRINT</button></center><br><br>
+	<center>
+		<h2>PRINT</h2>
+		<table>
+		<tr><td>NAME: </td><td><input type="text" id="p1"></td></tr>
+		<tr><td>CLASS TEACHER</td><td><input type="text" id="p2"></td></tr>
+		<tr><td>ABSENT DAYS</td><td><input type="text" id="p3"></td></tr>
+		<tr><td>FINE AMOUNT</td><td><input type="text"  id="p4"></td></tr>
+		<tr><td>TOTAL</td><td><input type="text" id="p5"></td></tr>
+	</table>
+	<button type="button" onclick="fremove()">clear</button></center>
+</body>
+</html>

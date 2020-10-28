@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>manual</title>
+</head>
+<style type="text/css">
+	body {
+		color:#FFFFFF;
+		 background-color: #000080;
+		 padding: 20px;
+	}
+	a{
+		color:#FFFFFF;
+		font-size: 150%;
+		margin-left: 80%;
+		}
+	
+
+</style>
+<script type="text/javascript">
+	function manu() {
+		var i,j,k,l,total;
+		i=document.getElementById('name').value;
+		j=document.getElementById('std').value;
+		k=document.getElementById('adays').value;
+		l=document.getElementById('amount').value;
+        total=k*l;
+
+        if ((i!="") && (j!="") && (k!="") && (l!="") )
+        {
+        	alert ("data inserted Successfully");
+        }
+        else {
+        	alert ("Empty space occured");
+        }
+
+		document.getElementById('rname').value=document.getElementById('name').value;
+		document.getElementById('rstd').value=document.getElementById('std').value;
+		document.getElementById('rdays').value=document.getElementById('adays').value;
+		document.getElementById('ramount').value=document.getElementById('amount').value;
+		document.getElementById('rtotal').value=total;
+	}
+	function bill()
+	{
+			i=document.getElementById('name').value="";
+		j=document.getElementById('std').value="";
+		k=document.getElementById('adays').value="";
+		l=document.getElementById('amount').value="";
+		document.getElementById('rname').value=document.getElementById('name').value="";
+		document.getElementById('rstd').value=document.getElementById('std').value="";
+		document.getElementById('rdays').value=document.getElementById('adays').value="";
+		document.getElementById('ramount').value=document.getElementById('amount').value="";
+		document.getElementById('rtotal').value="";
+	}
+</script>
+<body align="center">
+	<a href="teacher.html" id="new"> View Teacher Details</a>
+	<a href="loginform.html">Logout</a>
+	<h2>Student Fine Amount</h2>
+	<fieldset>
+	<legend align="center"><b>Calculate Student Absent Fees</b></legend>
+	<table align="center">
+       <h2 align="center"></h2>
+	<tr><td>Name:</td><td><input type="text"  onfocus="this.value=''"id="name" required></td><tr>
+	<tr><td>Standard:</td><td><input type="text"onfocus="this.value=''" id="std"required></td><tr>	
+    <tr><td>Absentdays:</td><td><input type="text"onfocus="this.value=''" id="adays" required></td><tr>
+	<tr><td>Absentamount:</td><td><input type="text" onfocus="this.value=''"id="amount"required></td></tr>
+	</table>
+	<button type="button" onclick="manu()">CheckAmount</button>
+	</fieldset>
+	
+	<table align="center"> <h2 align="center">Student Fees Total Amount</h2>
+<tr><td>Name:</td><td><input type="text"onfocus="this.value=''" id="rname"></td></tr>
+<tr><td>Standard:</td><td><input type="text" onfocus="this.value=''"id="rstd"></td><tr>	
+<tr><td>Absentdays:</td><td><input type="text"onfocus="this.value=''" id="rdays"></td></tr>
+<tr><td>Absentamount:<td><input type="text" onfocus="this.value=''"id="ramount"></td></td>
+<tr><td>Total:<td><input type="text"onfocus="this.value=''" id="rtotal"></td></tr>  </table> 
+ <button type=button onclick="bill()">Clear</button>
+
+</body>
+</html>
