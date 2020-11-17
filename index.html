@@ -1,51 +1,151 @@
-<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>login form</title>
-  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="booksite.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Vanga padikalam</title>
 </head>
-<style type="text/css">
-  body {
-    background-color: #000080;
-    color:#FFFFFF;  
-    margin-top: 13%;
-  }
-  #password{
-      margin:20px;
-  } 
- 
-</style>
-<script type="text/javascript">
-  function validateform(){  
-var name=document.getElementById('username').value; 
-var password=document.getElementById('password').value;
-  
-if (name=="developer" && password=="prem")
-{  
-  alert("Welcome");
-  return true;  
-   }
-else {  
-  alert("incorrect attempt");  
-  return false;  
-  }  
-}  
-function box() {
-  document.getElementById('username').value="";
-  document.getElementById('password').value="";
-}
-</script>
-<body align="center">
-<form action="homepage.html" onsubmit=" return validateform()">
-  
-<h2>Login Form</h2>
+<body>
+    <div class="section">
+       <div class="container">
+           <div class="header">
+               <img src="book1.jpg" alt="">
+               <h2>Vaanga padikalam</h2>
+               <ul class="list">
+                   <li><a href="#">Home</a></li>
+                   <li><a href="#">Courses</a></li>
+                   <li><a href="#">About</a></li>
+                   <li><a href="#">Careers</a></li>
+                   <li><a href="#">Contact us</a></li>
+               </ul>
+            </div>
+       </div>
 
-<table align="center">
-  <tr><td><label>Username</label><td><input type="text" id="username" required></td></td></tr>
-  <tr><td><label>Password</label><td><input type="password" id="password" required></td></td></tr>
-</table>
-<input type="submit" value="submit"> <input type="submit" value="clear" onclick="box()">
+    </div>
 
-</form>
+    <div class="section1">
+        <div class="container1" >
+            <img src="school.png" alt="" id="school">
+            <p id="middle">We are Providing a best Education to our students </p>
+            <button type="button" class="btn btn-primary" id="but" >Read More</button>
+        </div>
+    </div>
+    
+    <div class="section2">
+        <div class="container2">
+            <h2 id="course">Our Courses</h2>
+       <p id="content">We Had Several Types of Courses and Experts in our Team. <br>
+           Our team mainly focused on Ecommerce web based sites</p>
+         
+         <div class="col-md-4" id="html">
+             <img src="html.jpg" alt="" id="htm">
+             <p id="html1"> <b> Strong Technical Team we had to provide a <br> best coching and services and html <br> 
+                and its latest versions </b></p>
+         </div>
+
+         <div class="col-md-4" id="css">
+             <img src="css.jpg" alt="" id="htm">
+             <p id="html1"> <b> Strong Technical Team we had to provide a <br> 
+                 best coching and services and Css and its <br> latest versions </b></p>
+         </div>
+        
+           <div class="col-md-4" id="javascript">
+               <img src="javascript.jpg" alt="" id="htm">
+               <p id="html1"><b> Strong Technical Team we had to provide a  <br> best coching and services and Javascript 
+                <br> and its latest versions </b> </p>
+           </div>
+           
+           <div class="col-sm-4" id="ui" >
+              <img src="ui.jpg" alt="" id="app">
+            <h2 id="full">Special Offers</h2>
+            <p id="ui1"> <b id="new"> UI Developers  </b> <b> is a Complete Guidens of Html,Css and <br> 
+                Javascript to create a complete webstie </b> </p>
+        </div>
+       
+        <div class="col-sm-4" id="fullstack" >
+             <img src="fullstack.png" alt="" id="app">
+            <h2 id="full"> Special Course for Winter </h2>
+            <p id="ui1"> <b id="new" > Full Stack Developers </b>  <b> is complete covering <br> 
+                postion of both Front end and BackEnd developer </b> </p>
+        </div>
+
+       
+        </div>
+    </div>
+
+    <div class="section3">
+        <div class="container3">
+            <div class="col-sm-12">
+            <h2 id="success" >Our Success Stories</h2>
+            <img src="person.jpg" alt="" id="person">
+            <h2 id="success11"> <b>Prem</b>  </h2>
+      <p id="success1"> "Fix Your Goal Play for it and Make it Success "</p>
+        <p id="success12" >He completed the course as full Mean stack Developer and he is working  <br>
+             in a  XYZ company and getting a salary of 60,000 per month</p>  
+
+             <h2 id="coach">Our Coaching Timing</h2>
+             <img src="book1.jpg" alt="" id="books" >
+             <table id="time">
+                 <tr > 
+                     <th> Days</th>
+                     <th>Timing</th>
+                    </tr>
+                    <tr> <td>Monday</td> <td>10.00am - 05.00 pm </td> </tr>
+                    <tr> <td>Tuesday</td> <td>10.00am - 05.00 pm </td> </tr>
+                    <tr> <td>Wednesday</td> <td>10.00am - 05.00 pm </td> </tr>
+                    <tr> <td>Thusday</td> <td>10.00am - 05.00 pm </td> </tr>
+                    <tr> <td>Friday</td> <td>10.00am - 05.00 pm </td> </tr>
+             </table>
+        </div>
+        </div>
+    </div>
+
+  <div class="section4">
+      <div class="container4">
+          <h2 id="careers">Careers</h2>
+          <div class="col-sm-6">
+          <img src="hugeopen.jpg" alt="" id="career">
+          </div>
+          <div class="col-sm-6" >
+              <h2 id="openings"> <u> Openings </u></h2>
+             
+          <b id="opens">  UI Professional </b> <br>
+           <b id="opens">  Web Developer </b>  <br> 
+            <b id="opens">  Web Designer </b><br>
+        <b id="opens">  Full Stack Developer </b><br>    
+          <b id="opens">   SEO Analysist  </b>   <br>
+            
+          </div>  
+
+
+      </div>
+  </div>
+        
+  <div class="section5">
+      <div class="container5">
+          <footer>
+              <h2 id="contus"> Contact Us  </h2>
+              <div class="col-sm-4">
+                <hr id="hori">
+                  <img src="book1.jpg" alt="" id="boo" >
+                
+                  <h2 id="vaanga">  <b> Vaanga Padikalam  </b> </h2> 
+                  <p id="vaanga1">   Prem@Vaangapadikalam.com  </b> 
+                                    8976567876  </b> <br>
+                                   Vasantha Nagar ,</b> <br>
+                                Bye-pass Road , Madurai- 3
+                                   
+                   <hr>
+                  </p>
+              </div>
+          </footer>
+      </div>
+  </div>
+
 </body>
 </html>
